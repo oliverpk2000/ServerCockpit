@@ -1,3 +1,8 @@
 <h1>Server Cockpit</h1>
 
-<input type>
+<input [([ngModel)]="" type="Text" placeholder="Server Name">
+<select>
+  <option value="Exam">Exam</option>
+  <option value="Training">Training</option>
+</select>
+<button (click)="createServer()">create</button>

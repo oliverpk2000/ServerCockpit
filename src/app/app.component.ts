@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ServerCockpit';
+  ServerArray: ServerObject[] = [];
+
+  createServer() {
+
+  }
+
+
+}
+
+class ServerObject{
+  exam: boolean = false;
+  name: string = "";
 }
