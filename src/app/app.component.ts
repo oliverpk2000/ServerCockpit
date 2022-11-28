@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ServerCockpit';
-  ServerArray: ServerObject[] = [];
+  serverArray: ServerObject[] = [];
+  serverName: String = "";
+  serverType: String = "";
 
   createServer() {
-
+    let so = new ServerObject()
+    so.name = this.serverName;
+    so.type = this.serverType;
+    this.serverArray.push(so);
+    this.serverName = "";
+    this.serverType = "";
   }
 
 
 }
 
-class ServerObject{
-  exam: boolean = false;
-  name: string = "";
+class ServerObject {
+  type: String = "";
+  name: String = "";
 }
