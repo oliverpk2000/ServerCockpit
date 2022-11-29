@@ -1,5 +1,5 @@
 <h1>Server Cockpit</h1>
-<app-cockpit></app-cockpit>
+<app-cockpit (objectCreator)="appendServerObject($event)"></app-cockpit>
 
 <div *ngFor="let items of serverArray">
   <app-server-element [name]="items.name" [type]="items.type"></app-server-element>

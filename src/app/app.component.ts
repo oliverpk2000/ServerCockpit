@@ -9,6 +9,9 @@ export class AppComponent {
   serverArray: ServerObject[] = [];
 
 
+  appendServerObject(so: ServerObject) {
+    this.serverArray.push(so);
+  }
 }
 
 
