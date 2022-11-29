@@ -1,11 +1,5 @@
 <h1>Server Cockpit</h1>
-
-<input [(ngModel)]="serverName" type="text" placeholder="Server Name">
-<select [(ngModel)]="serverType" name="type">
-  <option value="Exam">Exam</option>
-  <option value="Training">Training</option>
-</select>
-<button (click)="createServer()">create</button>
+<app-cockpit></app-cockpit>
 
 <div *ngFor="let items of serverArray">
   <app-server-element [name]="items.name" [type]="items.type"></app-server-element>
